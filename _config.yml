@@ -1,0 +1,44 @@
+# Site settings
+title: Miss Bluesapphire
+header: Miss Bluesapphire
+email: "snitcher148@gmail.com"
+phone: "+66841514456"
+og_description: "Phonphailin Thammakhankhaeng, Graphic designer &amp; Illustrator &agrave; Chiang Mai."
+description: "Gaphic designer & Illustrator"
+url: ""
+baseurl: ""
+#facebook_username: ""
+instagram_username: "miss.bluesapphire"
+
+# Owner/author information
+owner:
+  name:   Phonphailin Thammakhankhaeng
+  avatar: avatar.png
+  favicon: favicon.png
+  info: Portfolio Phonphailin Thammakhankhaeng
+
+# Internal nav
+nav:
+  - ILLUSTRATION: "galerie_illustration/"  
+  - JERSEY: "galerie_jersey/"  
+#  - DIVERS: "galerie_divers/"  
+  - ABOUT: "about/"
+  - CONTACT: "contact/"
+ 
+
+# All translation keys
+translations:
+ # 404.html
+  permalink: "/404.html"
+
+# Server
+destination:      	 ./_site
+port:             	 4000
+
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+exclude: ["less","node_modules","README.md"]
