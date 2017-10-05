@@ -20,7 +20,7 @@ owner:
 # Internal nav
 nav:
   - ILLUSTRATION: "galerie_illustration/"  
-  - JERSEY: "galerie_jersey/"  
+  - FASHION: "galerie_fashion/"  
 #  - DIVERS: "galerie_divers/"  
   - ABOUT: "about/"
   - CONTACT: "contact/"
