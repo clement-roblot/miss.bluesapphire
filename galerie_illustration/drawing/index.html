@@ -1,0 +1,144 @@
+---
+layout: page
+active: galerie_illustration
+album-title: "Illustration"
+images:
+ - image_path: /galerie_illustration/img/IMG_20170610_155414_947.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170610_164424_755.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170610_164915_089.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170612_145419_390.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170612_173645_492.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170612_173951_800.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170612_174450_867.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170613_224103_289.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170617_143840_709.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170620_212227_912.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170621_235256_182.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170627_172303_072.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170716_202337_909.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170719_093758_779.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170812_105250_120.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170813_184454_698.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170813_190332_547.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170815_053710_509.jpg
+   copyright:
+   caption: Fairy
+ - image_path: /galerie_illustration/img/IMG_20170817_064401_650.jpg
+   copyright:
+   caption: Fairy
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+ <a href="{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="">
+ <img src="{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>
